@@ -17,8 +17,11 @@
   position: absolute;
   top: 30px;
   left: 7%;
+  right: 7%;
+  font-size: 20px;
   background: rgba(51, 187, 85, .7);
-  padding: 10px 38vw 10px 38vw;
+  padding: 10px 30vw 10px 30vw;
+  color: white;
   border-radius: 9px;
   animation: fadeInOut 3s infinite;
 }
