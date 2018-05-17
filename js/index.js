@@ -1,8 +1,8 @@
 tinymce.init({
     min_height: 400,
-    images_upload_url: 'https://tinymce-playground.firebaseapp.com/upload.js',
-  images_upload_base_path: 'https://tinymce-playground.firebaseapp.com/uploads',
-  images_upload_credentials: true,
+  //   images_upload_url: 'https://tinymce-playground.firebaseapp.com/upload.js',
+  // images_upload_base_path: 'https://tinymce-playground.firebaseapp.com/uploads',
+  // images_upload_credentials: true,
     selector: '.mytextarea',
     removed_menuitems: 'newdocument',
     browser_spellcheck: true,
