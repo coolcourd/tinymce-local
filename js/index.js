@@ -28,12 +28,13 @@ tinyMCE.activeEditor.setContent(JSON.parse(load))  }
 }, 50)
 }
 
-
-document.querySelector('#save').addEventListener('click', () => {
-  const getHtml = () => tinyMCE.activeEditor.getContent()
-  localStorage.setItem("save" , JSON.stringify(getHtml()));
+const save = () => {
+  localStorage.setItem("save" , JSON.stringify(tinyMCE.activeEditor.getContent()))
   messagetooltip("Saved Successfully")
-})
+}
+
+
+document.querySelector('#save').addEventListener('click', save)
 
 const messagetooltip = (message) => {
   var tooltip = document.createElement("div")
