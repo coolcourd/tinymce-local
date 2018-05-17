@@ -12,3 +12,20 @@
   color: white;
   font-size: 20px;
 }
+
+#tooltip{
+  position: absolute;
+  top: 30px;
+  left: 7%;
+  background: rgba(51, 187, 85, .7);
+  padding: 10px 38vw 10px 38vw;
+  border-radius: 9px;
+  animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity:0; }
+  20%  { opacity:1; }
+  80%  { opacity:1; }
+  100% { opacity:0; }
+}

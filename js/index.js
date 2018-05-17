@@ -25,10 +25,24 @@ let stateCheck = setInterval(() => {
   if (document.readyState === 'complete') {
     clearInterval(stateCheck);
 tinyMCE.activeEditor.setContent(JSON.parse(load))  }
-}, 50);
+}, 50)
 }
+
 
 document.querySelector('#save').addEventListener('click', () => {
   const getHtml = () => tinyMCE.activeEditor.getContent()
   localStorage.setItem("save" , JSON.stringify(getHtml()));
+  messagetooltip("Saved Successfully")
 })
+
+const messagetooltip = (message) => {
+  var tooltip = document.createElement("div")
+  tooltip.setAttribute("id", "tooltip")
+  var content = document.createTextNode(message)
+  tooltip.appendChild(content)
+  document.body.append(tooltip)
+  setTimeout(()=> {
+    var element = document.getElementById("tooltip");
+    element.parentNode.removeChild(element);
+  }, 3000)
+}
